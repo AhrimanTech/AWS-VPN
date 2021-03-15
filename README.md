@@ -1,3 +1,3 @@
 # AWS-VPN
 Installer facilement un VPN sur AWS
-VPN vers intranet
+- VPN vers intranet
