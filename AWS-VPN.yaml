@@ -38,23 +38,6 @@ Resources:
               echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
               sysctl -p
               iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE && iptables-save
-            - |
-              #Simple Intranet page
-              sudo apt install apache2 -y
-              sudo service apache2 reload
-              rm /var/www/html/index.html
-              cat << EOF > /var/www/html/index.html
-              <!DOCTYPE  html>
-              <html  lang="en">
-              <head>
-                  <title>YourInformation</title>
-                  <span style="font-size : 500%;font-weight:bold;font-style: italic;color:black;font-family:Arial;">YourInformation</span>
-              </head>
-              <body>
-                  <h1>YourInformation</h1>
-              </body>
-              </html>
-              EOF
 
 
   VPNSecurityGroup:
